@@ -556,14 +556,19 @@ function AdminPanelComponent_div_23_div_7_div_1_Template(rf, ctx) { if (rf & 1) 
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AdminPanelComponent_div_23_div_7_div_1_Template_input_ngModelChange_41_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r55); const ctx_r62 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r62.selected.others = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](42, "td", 56);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "input", 57);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("ngModelChange", function AdminPanelComponent_div_23_div_7_div_1_Template_input_ngModelChange_43_listener($event) { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r55); const ctx_r63 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r63.selected.id = $event; });
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](42, "table", 10);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "tr");
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "td", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "button", 43);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AdminPanelComponent_div_23_div_7_div_1_Template_button_click_45_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r55); const ctx_r63 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r63.modify(ctx_r63.movie); });
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](46, "Modify");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](44, "table", 10);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](45, "tr");
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](46, "td", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](47, "button", 43);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function AdminPanelComponent_div_23_div_7_div_1_Template_button_click_47_listener() { _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵrestoreView"](_r55); const ctx_r64 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](3); return ctx_r64.modify(ctx_r64.selected); });
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](48, "Modify");
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -587,10 +592,12 @@ function AdminPanelComponent_div_23_div_7_div_1_Template(rf, ctx) { if (rf & 1) 
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx_r53.selected.releaseDate);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx_r53.selected.others);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵproperty"]("ngModel", ctx_r53.selected.id);
 } }
 function AdminPanelComponent_div_23_div_7_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 8);
-    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, AdminPanelComponent_div_23_div_7_div_1_Template, 47, 8, "div", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](1, AdminPanelComponent_div_23_div_7_div_1_Template, 49, 9, "div", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
 } if (rf & 2) {
     const ctx_r44 = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵnextContext"](2);
@@ -680,7 +687,8 @@ class AdminPanelComponent {
     }
     modify(movie) {
         return Object(tslib__WEBPACK_IMPORTED_MODULE_0__["__awaiter"])(this, void 0, void 0, function* () {
-            this.http.post(this.MOD_url, movie).toPromise()
+            console.log(JSON.stringify(movie));
+            this.http.put(this.MOD_url, movie).toPromise()
                 .then((data) => {
                 console.log(data);
                 console.log(JSON.stringify(data.json));
@@ -706,7 +714,6 @@ class AdminPanelComponent {
             return;
         }
         this.expandedId = id;
-        console.log("jd");
     }
     onDisplay() {
         this.display = !this.display;
@@ -727,7 +734,7 @@ class AdminPanelComponent {
     }
 }
 AdminPanelComponent.ɵfac = function AdminPanelComponent_Factory(t) { return new (t || AdminPanelComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]), _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdirectiveInject"](_movies_movies_service__WEBPACK_IMPORTED_MODULE_4__["MovieService"])); };
-AdminPanelComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AdminPanelComponent, selectors: [["app-admin-panel"]], decls: 24, vars: 5, consts: [[1, "panel-component"], [1, "panel-element"], [1, "panel-element-header"], [1, "unfold-button", 3, "click"], ["class", "panel-element-header", 4, "ngIf"], [4, "ngIf"], ["class", "panel-element-detail", 4, "ngIf"], [1, "action-button", 3, "click"], [1, "panel-element-detail"], [1, "panel-element-detail-header"], [1, "table"], [1, "table-header"], [2, "min-width", "2%", "max-width", "2%"], [4, "ngFor", "ngForOf"], [1, "table-element"], ["rowspan", "1", "class", "table-element-id", 4, "ngIf"], ["rowspan", "3", "class", "table-element-id", 4, "ngIf"], ["rowspan", "3", 1, "table-element-del"], [3, "click"], ["class", "table-header", 4, "ngIf"], ["rowspan", "1", 1, "table-element-id"], ["rowspan", "3", 1, "table-element-id"], ["colspan", "1"], ["colspan", "2"], ["colspan", "1", 1, "table-element"], ["colspan", "2", 1, "table-element"], [1, "table-element-title"], ["type", "text", "name", "title", "placeholder", "title", 3, "ngModel", "ngModelChange"], [1, "table-element-movieGenre"], ["type", "text", "name", "movieGenre", "placeholder", "movieGenre", 3, "ngModel", "ngModelChange"], [1, "table-element-length"], ["type", "text", "name", "length", "placeholder", "length", 3, "ngModel", "ngModelChange"], [1, "table-element-director"], ["type", "text", "name", "director", "placeholder", "director", 3, "ngModel", "ngModelChange"], [1, "table-element-posterSrc"], ["type", "text", "name", "posterSrc", "placeholder", "posterSrc", 3, "ngModel", "ngModelChange"], [1, "table-element-description"], ["type", "text", "name", "description", "placeholder", "description", 3, "ngModel", "ngModelChange"], [1, "table-element-releaseDate"], ["type", "date", "name", "releaseDate", "placeholder", "releaseDate", 3, "ngModel", "ngModelChange"], [1, "table-element-others"], ["type", "text", "name", "others", "placeholder", "others", 3, "ngModel", "ngModelChange"], [1, "table-element-send"], [1, "submit", 3, "click"], ["class", "selector", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "action-button", "style", "border: 2px solid red", 3, "click", 4, "ngIf"], ["class", "action-button", "style", "border: 2px solid yellow", 3, "click", 4, "ngIf"], [1, ""], [1, "selector", 3, "ngModel", "ngModelChange"], [3, "ngValue", 4, "ngFor", "ngForOf"], [3, "ngValue"], [1, "action-button", 2, "border", "2px solid red", 3, "click"], [1, "action-button", 2, "border", "2px solid yellow", 3, "click"], [1, "table-element-title", 2, "width", "40%"], [1, "table-element-movieGenre", 2, "width", "20%"], [1, "table-element-director", 2, "width", "20%"]], template: function AdminPanelComponent_Template(rf, ctx) { if (rf & 1) {
+AdminPanelComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: AdminPanelComponent, selectors: [["app-admin-panel"]], decls: 24, vars: 5, consts: [[1, "panel-component"], [1, "panel-element"], [1, "panel-element-header"], [1, "unfold-button", 3, "click"], ["class", "panel-element-header", 4, "ngIf"], [4, "ngIf"], ["class", "panel-element-detail", 4, "ngIf"], [1, "action-button", 3, "click"], [1, "panel-element-detail"], [1, "panel-element-detail-header"], [1, "table"], [1, "table-header"], [2, "min-width", "2%", "max-width", "2%"], [4, "ngFor", "ngForOf"], [1, "table-element"], ["rowspan", "1", "class", "table-element-id", 4, "ngIf"], ["rowspan", "3", "class", "table-element-id", 4, "ngIf"], ["rowspan", "3", 1, "table-element-del"], [3, "click"], ["class", "table-header", 4, "ngIf"], ["rowspan", "1", 1, "table-element-id"], ["rowspan", "3", 1, "table-element-id"], ["colspan", "1"], ["colspan", "2"], ["colspan", "1", 1, "table-element"], ["colspan", "2", 1, "table-element"], [1, "table-element-title"], ["type", "text", "name", "title", "placeholder", "title", 3, "ngModel", "ngModelChange"], [1, "table-element-movieGenre"], ["type", "text", "name", "movieGenre", "placeholder", "movieGenre", 3, "ngModel", "ngModelChange"], [1, "table-element-length"], ["type", "text", "name", "length", "placeholder", "length", 3, "ngModel", "ngModelChange"], [1, "table-element-director"], ["type", "text", "name", "director", "placeholder", "director", 3, "ngModel", "ngModelChange"], [1, "table-element-posterSrc"], ["type", "text", "name", "posterSrc", "placeholder", "posterSrc", 3, "ngModel", "ngModelChange"], [1, "table-element-description"], ["type", "text", "name", "description", "placeholder", "description", 3, "ngModel", "ngModelChange"], [1, "table-element-releaseDate"], ["type", "date", "name", "releaseDate", "placeholder", "releaseDate", 3, "ngModel", "ngModelChange"], [1, "table-element-others"], ["type", "text", "name", "others", "placeholder", "others", 3, "ngModel", "ngModelChange"], [1, "table-element-send"], [1, "submit", 3, "click"], ["class", "selector", 3, "ngModel", "ngModelChange", 4, "ngIf"], ["class", "action-button", "style", "border: 2px solid red", 3, "click", 4, "ngIf"], ["class", "action-button", "style", "border: 2px solid yellow", 3, "click", 4, "ngIf"], [1, ""], [1, "selector", 3, "ngModel", "ngModelChange"], [3, "ngValue", 4, "ngFor", "ngForOf"], [3, "ngValue"], [1, "action-button", 2, "border", "2px solid red", 3, "click"], [1, "action-button", 2, "border", "2px solid yellow", 3, "click"], [1, "table-element-title", 2, "width", "40%"], [1, "table-element-movieGenre", 2, "width", "20%"], [1, "table-element-director", 2, "width", "20%"], [2, "visibility", "visible"], ["type", "text", "name", "id", "placeholder", "id", 3, "ngModel", "ngModelChange"]], template: function AdminPanelComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](2, "div", 2);
