@@ -1,2 +1,2 @@
 # RKutnik.github.io
-CInema Frontent Basic
+Cinema Frontent Basic
