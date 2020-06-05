@@ -4032,6 +4032,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         path: 'movie/:id',
         component: _client_module_movies_movie_detail_component__WEBPACK_IMPORTED_MODULE_10__["MovieDetailComponent"]
       }, {
+        path: 'welcome',
+        component: _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_9__["WelcomeComponent"]
+      }, {
         path: '',
         redirectTo: 'welcome',
         pathMatch: 'full'
@@ -4062,6 +4065,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
           }, {
             path: 'movie/:id',
             component: _client_module_movies_movie_detail_component__WEBPACK_IMPORTED_MODULE_10__["MovieDetailComponent"]
+          }, {
+            path: 'welcome',
+            component: _welcome_welcome_component__WEBPACK_IMPORTED_MODULE_9__["WelcomeComponent"]
           }, {
             path: '',
             redirectTo: 'welcome',
@@ -5283,7 +5289,11 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     };
 
     var _c1 = function _c1() {
-      return ["/admin"];
+      return ["/panel/movie"];
+    };
+
+    var _c2 = function _c2() {
+      return ["/panel/cinema"];
     };
 
     var WelcomeComponent = /*#__PURE__*/function () {
@@ -5310,8 +5320,8 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     WelcomeComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({
       type: WelcomeComponent,
       selectors: [["app-welcome"]],
-      decls: 7,
-      vars: 4,
+      decls: 10,
+      vars: 6,
       consts: [[3, "routerLink"]],
       template: function WelcomeComponent_Template(rf, ctx) {
         if (rf & 1) {
@@ -5331,7 +5341,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](5, "a", 0);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " panel administracyjny\n");
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](6, " panel administracyjny film\xF3w\n");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](7, "br");
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](8, "a", 0);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](9, " panel administracyjny kin\n");
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         }
@@ -5339,11 +5357,15 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
         if (rf & 2) {
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](2);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](2, _c0));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c0));
 
           _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
 
-          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](3, _c1));
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](4, _c1));
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵadvance"](3);
+
+          _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵproperty"]("routerLink", _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵpureFunction0"](5, _c2));
         }
       },
       directives: [_angular_router__WEBPACK_IMPORTED_MODULE_1__["RouterLinkWithHref"]],
